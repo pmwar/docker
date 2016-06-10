@@ -2,6 +2,12 @@
 <project>
   <actions/>
   <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>10</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -35,15 +41,15 @@ if [ ! -d $JENKINS_HOME/.git ]; then
     git config --global user.name &quot;Jenkins User&quot; &amp;&amp; \
     git config --global user.email mark.earl.waite@gmail.com &amp;&amp; \
     git init &amp;&amp; \
-    echo .cache/ >> .gitignore &amp;&amp; \
-    echo .config/ >> .gitignore &amp;&amp; \
-    echo .dbus/ >> .gitignore &amp;&amp; \
-    echo .java/ >> .gitignore &amp;&amp; \
-    echo .jenkins/ >> .gitignore &amp;&amp; \
-    echo .m2/ >> .gitignore &amp;&amp; \
-    echo tools/ >> .gitignore &amp;&amp; \
-    echo userContent/ >> .gitignore &amp;&amp; \
-    echo war/ >> .gitignore &amp;&amp; \
+    echo .cache/ &gt;&gt; .gitignore &amp;&amp; \
+    echo .config/ &gt;&gt; .gitignore &amp;&amp; \
+    echo .dbus/ &gt;&gt; .gitignore &amp;&amp; \
+    echo .java/ &gt;&gt; .gitignore &amp;&amp; \
+    echo .jenkins/ &gt;&gt; .gitignore &amp;&amp; \
+    echo .m2/ &gt;&gt; .gitignore &amp;&amp; \
+    echo tools/ &gt;&gt; .gitignore &amp;&amp; \
+    echo userContent/ &gt;&gt; .gitignore &amp;&amp; \
+    echo war/ &gt;&gt; .gitignore &amp;&amp; \
     git add .gitignore
 fi
 

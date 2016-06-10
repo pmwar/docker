@@ -2,13 +2,19 @@
 <project>
   <actions/>
   <description>[JENKINS-14572](https://issues.jenkins-ci.org/browse/JENKINS-14572) allows clone without tags</description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>10</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
     <org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty plugin="leastload@1.0.3">
       <leastLoadDisabled>false</leastLoadDisabled>
     </org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.1-SNAPSHOT">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -37,6 +43,7 @@
         <noTags>true</noTags>
         <reference>/var/lib/git/mwaite/jenkins/git-client-plugin.git</reference>
         <timeout>1</timeout>
+        <depth>0</depth>
       </hudson.plugins.git.extensions.impl.CloneOption>
       <hudson.plugins.git.extensions.impl.AuthorInChangelog/>
       <hudson.plugins.git.extensions.impl.WipeWorkspace/>
