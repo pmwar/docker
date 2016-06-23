@@ -74,7 +74,7 @@
   <builders>
     <hudson.tasks.Maven>
       <targets>compile</targets>
-      <mavenName>maven-3.1.1</mavenName>
+      <mavenName>mvn</mavenName>
       <properties>skipTests=true</properties>
       <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
