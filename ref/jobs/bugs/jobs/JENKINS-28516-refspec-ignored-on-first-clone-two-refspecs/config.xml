@@ -19,7 +19,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <name>origin-only-master-branch</name>
-        <refspec>+refs/heads/master:refs/remotes/origin/master +refs/heads/ongoing/*:refs/remotes/origin/ongoing/*</refspec>
+        <refspec>+refs/heads/master:refs/remotes/origin-only-master-branch/master +refs/heads/ongoing/*:refs/remotes/origin-only-master-branch/ongoing/*</refspec>
         <url>https://github.com/MarkEWaite/git-plugin</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
@@ -41,7 +41,7 @@
   </scm>
   <quietPeriod>0</quietPeriod>
   <canRoam>true</canRoam>
-  <disabled>true</disabled>
+  <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
