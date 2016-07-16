@@ -48,7 +48,6 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>java-7</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
       <spec></spec>

@@ -43,7 +43,6 @@ Requires a file system and operating system configured to support symoblic links
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
       <spec></spec>
