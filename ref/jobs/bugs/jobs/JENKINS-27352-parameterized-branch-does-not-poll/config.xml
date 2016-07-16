@@ -10,12 +10,9 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.2">
-      <projectUrl>https://github.com/jenkinsci/git-client-plugin.git/</projectUrl>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition plugin="git-parameter@0.5.1">
+        <net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition plugin="git-parameter@0.6.0">
           <name>BRANCH_TO_BUILD</name>
           <description>Branch to build</description>
           <uuid>1501a58e-5083-49f2-a983-ccd6d8163562</uuid>
@@ -28,7 +25,7 @@
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.2">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>

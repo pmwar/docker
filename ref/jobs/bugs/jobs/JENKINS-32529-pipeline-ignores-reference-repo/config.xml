@@ -3,12 +3,7 @@
   <actions/>
   <description>[JENKINS-32529](https://issues.jenkins-ci.org/browse/JENKINS-32529) reference repo honored by pipeline script</description>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.2">
-      <projectUrl>https://github.com/MarkEWaite/git-plugin/</projectUrl>
-      <displayName></displayName>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
-  </properties>
+  <properties/>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@1.14.2">
     <script>node (&quot;linux || master&quot;) {
    // Mark the code checkout &apos;stage&apos;....

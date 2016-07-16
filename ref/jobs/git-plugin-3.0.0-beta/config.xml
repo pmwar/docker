@@ -10,10 +10,6 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.2">
-      <projectUrl>https://github.com/MarkEWaite/git-plugin/</projectUrl>
-      <displayName></displayName>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty plugin="leastload@1.0.3">
       <leastLoadDisabled>false</leastLoadDisabled>
     </org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty>
@@ -58,7 +54,7 @@
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.2">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -142,7 +138,7 @@ maven.findbugs.failure.strict=false</properties>
       <excludePattern></excludePattern>
       <includePattern></includePattern>
     </hudson.plugins.findbugs.FindBugsPublisher>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.13">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.15">
       <testResults>target/surefire-reports/TEST-*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
