@@ -10,7 +10,15 @@
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.2">
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>7</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.3">
       <projectUrl>git://github.com/MarkEWaite/jenkins-bugs/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -41,6 +49,14 @@
       </hudson.plugins.git.extensions.impl.LocalBranch>
       <hudson.plugins.git.extensions.impl.WipeWorkspace/>
       <hudson.plugins.git.extensions.impl.AuthorInChangelog/>
+      <hudson.plugins.git.extensions.impl.CloneOption>
+        <shallow>true</shallow>
+        <noTags>true</noTags>
+        <reference>/var/lib/git/mwaite/bugs/jenkins-bugs.git</reference>
+        <timeout>1</timeout>
+        <depth>3</depth>
+        <honorRefspec>true</honorRefspec>
+      </hudson.plugins.git.extensions.impl.CloneOption>
     </extensions>
   </scm>
   <quietPeriod>0</quietPeriod>
@@ -65,7 +81,7 @@
   </builders>
   <publishers>
     <org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder plugin="groovy-postbuild@2.3.1">
-      <script plugin="script-security@1.20">
+      <script plugin="script-security@1.21">
         <script>// Log should only contain branch name of JENKINS-31393, not any other branch name
 if (manager.logContains(&quot;.*remotes/origin-only-JENKINS-31393/JENKINS-14798.*&quot;)) {
     manager.addWarningBadge(&quot;More than given refspec branches cloned&quot;)
