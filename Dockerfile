@@ -1,4 +1,4 @@
-FROM java:6-jdk
+FROM openjdk:6-jdk
 
 RUN apt-get update && apt-get install -y \
   curl \
