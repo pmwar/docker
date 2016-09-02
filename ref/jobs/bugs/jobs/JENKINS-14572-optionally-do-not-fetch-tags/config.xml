@@ -14,16 +14,16 @@
       <leastLoadDisabled>false</leastLoadDisabled>
     </org.bstick12.jenkinsci.plugins.leastload.LeastLoadDisabledProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <name>upstream</name>
-        <url>git://github.com/jenkinsci/git-client-plugin.git</url>
+        <url>https://github.com/jenkinsci/git-client-plugin.git</url>
       </hudson.plugins.git.UserRemoteConfig>
       <hudson.plugins.git.UserRemoteConfig>
         <name>downstream</name>
-        <url>git://github.com/MarkEWaite/git-client-plugin.git</url>
+        <url>https://github.com/MarkEWaite/git-client-plugin.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>

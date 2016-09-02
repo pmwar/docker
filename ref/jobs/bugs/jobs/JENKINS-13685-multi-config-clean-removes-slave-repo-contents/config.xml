@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<matrix-project plugin="matrix-project@1.7.1">
+<matrix-project plugin="matrix-project@1.7">
   <actions/>
   <description></description>
   <logRotator class="hudson.tasks.LogRotator">
@@ -14,7 +14,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git://github.com/MarkEWaite/git-client-plugin.git</url>
+        <url>https://github.com/MarkEWaite/git-client-plugin.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -46,28 +46,14 @@
   <axes>
     <org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis plugin="elastic-axis@1.2">
       <name>label</name>
-      <values>
-        <string>waite2011</string>
-        <string>alan-pc</string>
-        <string>tropicana</string>
-        <string>family-win7-a</string>
-        <string>jessie64a</string>
-        <string>wheezy64b</string>
-        <string>centos7x64</string>
-        <string>master</string>
-        <string>centos66</string>
-        <string>debian6x86</string>
-        <string>debian8</string>
-        <string>markwaite</string>
-      </values>
-      <label>windows , linux </label>
+      <label>!slow</label>
       <ignoreOffline>true</ignoreOffline>
     </org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis>
     <hudson.matrix.JDKAxis>
       <name>jdk</name>
       <values>
-        <string>java-8</string>
-        <string>java-7</string>
+        <string>jdk8</string>
+        <string>jdk7</string>
       </values>
     </hudson.matrix.JDKAxis>
   </axes>
