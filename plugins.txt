@@ -1,7 +1,7 @@
 ace-editor:latest
 analysis-core:latest
-antisamy-markup-formatter
 ant
+antisamy-markup-formatter
 bitbucket:latest
 blueocean-commons:latest
 blueocean-config:latest
@@ -34,13 +34,13 @@ elastic-axis:latest
 favorite:latest
 findbugs:latest
 git-client:latest
-github-api:latest
-github-branch-source:latest
-github:latest
-github-organization-folder:latest
-git:latest
 git-parameter:latest
 git-server:latest
+git:latest
+github-api:latest
+github-branch-source:latest
+github-organization-folder:latest
+github:latest
 groovy-postbuild:latest
 handlebars:latest
 htmlpublisher:latest
@@ -52,8 +52,8 @@ jacoco:latest
 javadoc
 jira:latest
 jquery-detached:latest
-jquery:latest
 jquery-ui:latest
+jquery:latest
 junit
 label-verifier:latest
 ldap
