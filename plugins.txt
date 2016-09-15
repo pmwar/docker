@@ -3,6 +3,17 @@ analysis-core:latest
 antisamy-markup-formatter
 ant
 bitbucket:latest
+blueocean-commons:latest
+blueocean-config:latest
+blueocean-dashboard:latest
+blueocean-events:latest
+blueocean-jwt:latest
+blueocean-personalization:latest
+blueocean-pipeline-api-impl:latest
+blueocean-rest-impl:latest
+blueocean-rest:latest
+blueocean-web:latest
+blueocean:latest
 bouncycastle-api:latest
 branch-api:latest
 build-blocker-plugin:latest
@@ -16,8 +27,11 @@ cvs
 depgraph-view:latest
 description-setter:latest
 display-url-api:latest
+docker-commons:latest
+docker-workflow:latest
 durable-task:latest
 elastic-axis:latest
+favorite:latest
 findbugs:latest
 git-client:latest
 github-api:latest
@@ -62,6 +76,7 @@ pegdown-formatter:latest
 pipeline-build-step:latest
 pipeline-graph-analysis:latest
 pipeline-input-step:latest
+pipeline-model-definition:latest
 pipeline-rest-api:latest
 pipeline-stage-step:latest
 pipeline-stage-view:latest
@@ -73,6 +88,7 @@ run-condition:latest
 scm-api:latest
 script-security
 sidebar-link:latest
+sse-gateway:latest
 ssh-agent:latest
 ssh-credentials
 ssh-slaves
@@ -86,6 +102,7 @@ timestamper:latest
 token-macro:latest
 tool-labels-plugin:latest
 translation
+variant:latest
 view-job-filters:latest
 warnings:latest
 windows-slaves
