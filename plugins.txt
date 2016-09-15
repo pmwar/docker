@@ -2,6 +2,7 @@ ace-editor:latest
 analysis-core:latest
 ant
 antisamy-markup-formatter
+authentication-tokens:latest
 bitbucket:latest
 blueocean-commons:latest
 blueocean-config:latest
