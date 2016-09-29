@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y \
   patch \
   rsync \
   wget \
-  zip \
   && rm -rf /var/lib/apt/lists/*
 
 # Need locale to assure UTF-8 files can be written to file system
