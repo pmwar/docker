@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.git.GitTool_-DescriptorImpl plugin="git-client@1.19.6">
+<hudson.plugins.git.GitTool_-DescriptorImpl plugin="git-client@2.1.0-SNAPSHOT">
   <installations class="hudson.plugins.git.GitTool-array">
     <hudson.plugins.git.GitTool>
       <name>Default</name>
@@ -11,5 +11,10 @@
       <home>jgit</home>
       <properties/>
     </org.jenkinsci.plugins.gitclient.JGitTool>
+    <org.jenkinsci.plugins.gitclient.JGitApacheTool>
+      <name>jgitapache</name>
+      <home>jgitapache</home>
+      <properties/>
+    </org.jenkinsci.plugins.gitclient.JGitApacheTool>
   </installations>
 </hudson.plugins.git.GitTool_-DescriptorImpl>
