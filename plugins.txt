@@ -22,6 +22,7 @@ build-blocker-plugin:latest
 buildresult-trigger:latest
 chaos-butler:latest
 cloudbees-folder:latest
+cmakebuilder:latest
 conditional-buildstep:latest
 config-file-provider:latest
 configurationslicing:latest
