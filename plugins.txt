@@ -8,6 +8,7 @@ bitbucket:latest
 blueocean-commons:latest
 blueocean-config:latest
 blueocean-dashboard:latest
+blueocean-display-url:latest
 blueocean-events:latest
 blueocean-jwt:latest
 blueocean-personalization:latest
@@ -82,6 +83,8 @@ pipeline-build-step:latest
 pipeline-graph-analysis:latest
 pipeline-input-step:latest
 pipeline-milestone-step:latest
+pipeline-model-api:latest
+pipeline-model-declarative-agent:latest
 pipeline-model-definition:latest
 pipeline-rest-api:latest
 pipeline-stage-step:latest
