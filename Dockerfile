@@ -1,12 +1,14 @@
 FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y \
+  build-essential \
   curl \
   gcc-multilib \
   git \
   less \
   locales \
   lsb-release \
+  make \
   patch \
   rsync \
   wget \
