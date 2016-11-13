@@ -25,7 +25,6 @@ if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
   done < <([[ $JENKINS_OPTS ]] && xargs printf '%s\0' <<<"$JENKINS_OPTS")
 
   echo java  ${java_opts_array[@]}  -jar /usr/share/jenkins/jenkins.war  ${jenkins_opts_array[@]}   $@
-  echo java "${java_opts_array[@]}" -jar /usr/share/jenkins/jenkins.war "${jenkins_opts_array[@]}" "$@"
   exec java  ${java_opts_array[@]}  -jar /usr/share/jenkins/jenkins.war  ${jenkins_opts_array[@]}   $@ 
 fi
 
