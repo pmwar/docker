@@ -26,7 +26,7 @@ if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
 
   echo java  ${java_opts_array[@]}  -jar /usr/share/jenkins/jenkins.war  ${jenkins_opts_array[@]}   $@
   echo java "${java_opts_array[@]}" -jar /usr/share/jenkins/jenkins.war "${jenkins_opts_array[@]}" "$@"
-  exec java "${java_opts_array[@]}" -jar /usr/share/jenkins/jenkins.war "${jenkins_opts_array[@]}" "$@"
+  exec java  ${java_opts_array[@]}  -jar /usr/share/jenkins/jenkins.war  ${jenkins_opts_array[@]}   $@ 
 fi
 
 # As argument is not jenkins, assume user want to run his own process, for sample a `bash` shell to explore this image
