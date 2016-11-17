@@ -5,6 +5,8 @@ antisamy-markup-formatter
 async-http-client:latest
 authentication-tokens:latest
 bitbucket:latest
+blueocean:latest
+blueocean-autofavorite:latest
 blueocean-commons:latest
 blueocean-config:latest
 blueocean-dashboard:latest
