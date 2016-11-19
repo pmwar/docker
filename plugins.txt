@@ -30,6 +30,7 @@ conditional-buildstep:latest
 config-file-provider:latest
 configurationslicing:latest
 credentials
+credentials-binding:latest
 cvs
 depgraph-view:latest
 description-setter:latest
