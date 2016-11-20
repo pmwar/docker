@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@2.2">
+<flow-definition plugin="workflow-job@2.9">
   <actions/>
   <description>[JENKINS-32529](https://issues.jenkins-ci.org/browse/JENKINS-32529) reference repo honored by pipeline script</description>
   <keepDependencies>false</keepDependencies>
@@ -12,12 +12,23 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.23.1">
       <projectUrl>https://github.com/jenkinsci/git-plugin/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+        <c class="list">
+          <hudson.triggers.SCMTrigger>
+            <spec></spec>
+            <ignorePostCommitHooks>false</ignorePostCommitHooks>
+          </hudson.triggers.SCMTrigger>
+        </c>
+        <list reference="../c"/>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.4">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.23">
     <script>node (&quot;linux&quot;) {
    // Mark the code checkout &apos;stage&apos;....
    stage &apos;Checkout&apos;
@@ -31,10 +42,4 @@
 }</script>
     <sandbox>true</sandbox>
   </definition>
-  <triggers>
-    <hudson.triggers.SCMTrigger>
-      <spec></spec>
-      <ignorePostCommitHooks>false</ignorePostCommitHooks>
-    </hudson.triggers.SCMTrigger>
-  </triggers>
 </flow-definition>
