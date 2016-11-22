@@ -35,7 +35,7 @@
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.3">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.2">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -64,7 +64,6 @@
         <reference>/var/lib/git/mwaite/bugs/jenkins-bugs.git</reference>
         <timeout>6</timeout>
         <depth>0</depth>
-        <honorRefspec>false</honorRefspec>
       </hudson.plugins.git.extensions.impl.CloneOption>
     </extensions>
   </scm>
