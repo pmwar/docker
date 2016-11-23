@@ -8,7 +8,7 @@
             <hudson.model.labels.LabelAtom>linux</hudson.model.labels.LabelAtom>
           </c>
         </atoms>
-        <expression class="hudson.model.labels.LabelExpression$Or">Debian||Ubuntu||CentOS||Raspbian||RedHatEnterpriseServer||RedHatEnterpriseClient||LinuxMint</expression>
+        <expression class="hudson.model.labels.LabelExpression$Or">Debian||Ubuntu||CentOS||Raspbian||RedHatEnterpriseServer||RedHatEnterpriseClient||LinuxMint||SUSE</expression>
       </org.jenkinsci.plugins.impliedlabels.Implication>
       <org.jenkinsci.plugins.impliedlabels.Implication>
         <atoms class="java.util.Collections$UnmodifiableSet">
@@ -184,7 +184,15 @@
             <hudson.model.labels.LabelAtom>git-2.5+</hudson.model.labels.LabelAtom>
           </c>
         </atoms>
-        <expression class="hudson.model.labels.LabelAtom">git-2.7.4||git-2.9.3</expression>
+        <expression class="hudson.model.labels.LabelExpression$Or">git-2.7.4||git-2.9.3</expression>
+      </org.jenkinsci.plugins.impliedlabels.Implication>
+      <org.jenkinsci.plugins.impliedlabels.Implication>
+        <atoms class="java.util.Collections$UnmodifiableSet">
+          <c class="sorted-set">
+            <hudson.model.labels.LabelAtom>SUSE-12</hudson.model.labels.LabelAtom>
+          </c>
+        </atoms>
+        <expression class="hudson.model.labels.LabelExpression$And">(SUSE)&amp;&amp;(12.0||12.1||12.2||12.3||12.4||12.5||12.6)</expression>
       </org.jenkinsci.plugins.impliedlabels.Implication>
     </c>
     <list reference="../c"/>
