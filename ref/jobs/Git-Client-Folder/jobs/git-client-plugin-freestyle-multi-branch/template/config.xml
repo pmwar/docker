@@ -36,7 +36,7 @@
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <quietPeriod>0</quietPeriod>
-  <assignedNode>!git-1.7.1</assignedNode>
+  <assignedNode>git-1.8+</assignedNode>
   <canRoam>false</canRoam>
   <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
