@@ -12,6 +12,7 @@ blueocean-config:latest
 blueocean-dashboard:latest
 blueocean-display-url:latest
 blueocean-events:latest
+blueocean-i18n:latest
 blueocean-jwt:latest
 blueocean-personalization:latest
 blueocean-pipeline-api-impl:latest
