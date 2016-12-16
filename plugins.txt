@@ -92,6 +92,7 @@ pipeline-model-declarative-agent:latest
 pipeline-model-definition:latest
 pipeline-rest-api:latest
 pipeline-stage-step:latest
+pipeline-stage-tags-metadata:latest
 pipeline-stage-view:latest
 plain-credentials:latest
 platformlabeler:latest
