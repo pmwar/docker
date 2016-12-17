@@ -9,6 +9,7 @@ import urllib2
 #----------------------------------------------------------------------------
 
 update_center_url = "http://updates.jenkins-ci.org/stable/"
+update_center_url = "http://updates.jenkins-ci.org/experimental/"
 file_name = "plugins.txt"
 remove_plugins = False
 
