@@ -82,7 +82,7 @@ It should remain after polling.  The bug is that the file is deleted by the poll
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>(System)</jdk>
+  <jdk>jdk8</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
       <spec>H/19 * * * *</spec>
