@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk
 
-RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl wget && rm -rf /var/lib/apt/lists/*
+
+RUN wget https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-linux-amd64-1.5.4.tar.gz && tar xzvf git-lfs-linux-amd64-1.5.4.tar.gz && cd git-lfs-1.5.4 && ./install.sh && git lfs install
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
