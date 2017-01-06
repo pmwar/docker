@@ -2,7 +2,12 @@ FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-linux-amd64-1.5.4.tar.gz -o git-lfs.tar.gz && tar xzf git-lfs.tar.gz && cd git-lfs-1.5.4 && ./install.sh && git lfs install
+# Install git lfs extension
+RUN curl -fsSL https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-linux-amd64-1.5.4.tar.gz -o git-lfs.tar.gz \
+    && tar xzf git-lfs.tar.gz \
+    && (cd git-lfs-1.5.4 && ./install.sh) \
+    && rm -rf git-lfs-1.5.4 \
+    && git lfs install
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
