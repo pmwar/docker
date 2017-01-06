@@ -19,6 +19,8 @@ RUN echo en_US.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 
+RUN wget https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-linux-amd64-1.5.4.tar.gz && tar xzvf git-lfs-linux-amd64-1.5.4.tar.gz && cd git-lfs-1.5.4 && ./install.sh && git lfs install
+
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
 
