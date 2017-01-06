@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.7.1">
   <actions/>
-  <description>Confirm that git lfs is installed on each Windows and Linux node</description>
+  <description>Confirm that git lfs is installed on each Windows and Linux node with at least git 1.8&#xd;
+&#xd;
+Git lfs requires git 1.8.2 minimum</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.plugins.buildblocker.BuildBlockerProperty plugin="build-blocker-plugin@1.7.3">
@@ -48,10 +50,7 @@
   <axes>
     <org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis plugin="elastic-axis@1.2">
       <name>label</name>
-      <values>
-        <string>master</string>
-      </values>
-      <label>windows,linux</label>
+      <label>(windows || linux) &amp;&amp; git-1.8+ </label>
       <ignoreOffline>true</ignoreOffline>
     </org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis>
   </axes>
