@@ -18,7 +18,7 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.23.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.25.0">
       <projectUrl>https://github.com/MarkEWaite/jenkins-demo/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -149,6 +149,18 @@
     </hudson.plugins.xshell.XShellBuilder>
   </builders>
   <publishers>
+    <org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder plugin="groovy-postbuild@2.3.1">
+      <script plugin="script-security@1.25">
+        <script>if (manager.logContains(&quot;.*compiler identification is unknown.*&quot;)) {
+    manager.addWarningBadge(&quot;compiler identification is unknown.&quot;)
+    manager.createSummary(&quot;warning.gif&quot;).appendText(&quot;&lt;h1&gt;compiler identification is unknown!&lt;/h1&gt;&quot;, false, false, false, &quot;red&quot;)
+    manager.buildUnstable()
+}</script>
+        <sandbox>false</sandbox>
+      </script>
+      <behavior>0</behavior>
+      <runForMatrixParent>false</runForMatrixParent>
+    </org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder>
     <hudson.plugins.textfinder.TextFinderPublisher plugin="text-finder@1.10">
       <regexp>.*Hello World\!$</regexp>
       <succeedIfFound>true</succeedIfFound>
