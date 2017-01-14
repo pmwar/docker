@@ -7,13 +7,14 @@ This is a fully functional Jenkins server, based on the Long Term Support releas
 
 For weekly releases check out [`jenkinsci/jenkins`](https://hub.docker.com/r/jenkinsci/jenkins/)
 
+
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
+
 
 # Usage
 
 ```
-docker build -t markewaite/master-with-plugins:latest .
-docker run -i --rm -p 8080:8080 -p 50000:50000 -v ~/.m2/:/var/jenkins_home/.m2/ -v ~/public_html/:/var/jenkins_home/userContent/ -t markewaite/master-with-plugins:latest
+docker run -p 8080:8080 -p 50000:50000 jenkins
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
@@ -27,13 +28,7 @@ docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins
 
 this will automatically create a 'jenkins_home' volume on docker host, that will survive container stop/restart/deletion. 
 
-You can also use a volume container:
-
-```
-docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home jenkins
-```
-
-Then myjenkins container has the volume (please do read about docker volume handling to find out more).
+Avoid using a bind mount from a folder on host into `/var/jenkins_home`, as this might result in file permission issue. If you _really_ need to bind mount jenkins_home, ensure that directory on host is accessible by the jenkins user in container (jenkins user - uid 1000) or use `-u some_other_user` parameter with `docker run`.
 
 ## Backing up data
 
@@ -63,6 +58,7 @@ and `Dockerfile`
 FROM jenkins
 COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 ```
+
 
 # Attaching build executors
 
@@ -95,6 +91,11 @@ java.util.logging.ConsoleHandler.level=FINEST
 EOF
 docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS="-Djava.util.logging.config.file=/var/jenkins_home/log.properties" -v `pwd`/data:/var/jenkins_home jenkins
 ```
+
+# Configuring reverse proxy
+If you want to install Jenkins behind a reverse proxy with prefix, example: mysite.com/jenkins, you need to add environnement variable `JENKINS_OPTS="--prefix=/jenkins"` and then follow the below procedures to configure your reverse proxy, which will depend if you have Apache ou Nginx:
+- [Apache](https://wiki.jenkins-ci.org/display/JENKINS/Running+Jenkins+behind+Apache)
+- [Nginx](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+behind+an+NGinX+reverse+proxy)
 
 # Passing Jenkins launcher parameters
 
