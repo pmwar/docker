@@ -86,6 +86,7 @@ parallel-test-executor:latest
 parameterized-trigger:latest
 pegdown-formatter:latest
 pipeline-build-step:latest
+pipeline-github-lib:latest
 pipeline-graph-analysis:latest
 pipeline-input-step:latest
 pipeline-milestone-step:latest
