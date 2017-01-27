@@ -20,11 +20,13 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 
 # Install git lfs extension
-RUN curl -fsSL https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-linux-amd64-1.5.4.tar.gz -o git-lfs.tar.gz \
-    && tar xzf git-lfs.tar.gz \
-    && (cd git-lfs-1.5.4 && ./install.sh) \
-    && rm -rf git-lfs-1.5.4 \
-    && git lfs install
+RUN build_deps="curl ca-certificates" && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ${build_deps} && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git-lfs && \
+    git lfs install && \
+    rm -r /var/lib/apt/lists/*
 
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
