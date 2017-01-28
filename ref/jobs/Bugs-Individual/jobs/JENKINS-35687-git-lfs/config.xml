@@ -56,7 +56,7 @@
         <depth>0</depth>
         <honorRefspec>true</honorRefspec>
       </hudson.plugins.git.extensions.impl.CloneOption>
-      <hudson.plugins.git.extensions.impl.GitLFSPull/>
+      <!-- <hudson.plugins.git.extensions.impl.GitLFSPull/> -->
     </extensions>
   </scm>
   <canRoam>true</canRoam>
