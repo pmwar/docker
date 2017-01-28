@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<matrix-project plugin="matrix-project@1.7.1">
+<matrix-project plugin="matrix-project@1.8">
   <actions/>
   <description>Confirm that git lfs is installed on each Windows and Linux node with at least git 1.8&#xd;
 &#xd;
@@ -50,7 +50,7 @@ Git lfs requires git 1.8.2 minimum</description>
   <axes>
     <org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis plugin="elastic-axis@1.2">
       <name>label</name>
-      <label>(windows || linux) &amp;&amp; git-1.8+ </label>
+      <label>git-lfs</label>
       <ignoreOffline>true</ignoreOffline>
     </org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis>
   </axes>
