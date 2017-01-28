@@ -100,6 +100,7 @@ plain-credentials:latest
 platformlabeler:latest
 pollscm:latest
 preSCMbuildstep:latest
+pubsub-light:latest
 run-condition:latest
 scm-api:latest
 script-security
