@@ -194,6 +194,14 @@
         </atoms>
         <expression class="hudson.model.labels.LabelExpression$And">(SUSE)&amp;&amp;(12.0||12.1||12.2||12.3||12.4||12.5||12.6)</expression>
       </org.jenkinsci.plugins.impliedlabels.Implication>
+      <org.jenkinsci.plugins.impliedlabels.Implication>
+        <atoms class="java.util.Collections$UnmodifiableSet">
+          <c class="sorted-set">
+            <hudson.model.labels.LabelAtom>git-lfs</hudson.model.labels.LabelAtom>
+          </c>
+        </atoms>
+        <expression class="hudson.model.labels.LabelAtom" reference="../../org.jenkinsci.plugins.impliedlabels.Implication[20]/atoms/c/hudson.model.labels.LabelAtom"/>
+      </org.jenkinsci.plugins.impliedlabels.Implication>
     </c>
     <list reference="../c"/>
   </implications>
