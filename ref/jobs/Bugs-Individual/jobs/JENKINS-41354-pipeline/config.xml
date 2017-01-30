@@ -34,17 +34,22 @@
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.24">
     <script>node {
-   stage(&apos;Preparation&apos;) { // for display purposes
-      // Get some code from a GitHub repository
+   stage(&apos;Prep&apos;) {
       git &apos;https://github.com/MarkEWaite/jenkins-bugs&apos;
    }
    stage(&apos;Build&apos;) {
-      // Run the maven build
       if (isUnix()) {
          sh &quot;env | sort&quot;
-         sh &quot;env | sort | grep GIT_COMMIT&quot;
       } else {
-         bat(&quot;set | findstr GIT_COMMIT&quot;)
+         bat(&quot;set&quot;)
+      }
+   }
+   stage(&apos;Verify&apos;) {
+      // Log should contain GIT_COMMIT=
+      if (!manager.logContains(&quot;.*GIT_COMMIT=.*&quot;)) {
+          manager.addWarningBadge(&quot;No GIT_COMMIT env variable&quot;)
+          manager.createSummary(&quot;warning.gif&quot;).appendText(&quot;&lt;h1&gt;No GIT_COMITT env variable!&lt;/h1&gt;&quot;, false, false, false, &quot;yellow&quot;)
+          manager.buildUnstable()
       }
    }
 }</script>
