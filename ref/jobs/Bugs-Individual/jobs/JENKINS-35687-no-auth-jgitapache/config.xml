@@ -74,11 +74,19 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec></spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <axes>
     <org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis plugin="elastic-axis@1.2">
       <name>label</name>
+      <values>
+        <string>master</string>
+      </values>
       <label>git-lfs</label>
       <ignoreOffline>true</ignoreOffline>
     </org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis>
