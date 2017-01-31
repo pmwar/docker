@@ -31,14 +31,14 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <name>origin-lfs</name>
-        <refspec>+refs/heads/tests/largeFileSupport:refs/remotes/origin-lfs/tests/largeFileSupport</refspec>
+        <name>origin</name>
+        <refspec>+refs/heads/tests/largeFileSupport:refs/remotes/origin/tests/largeFileSupport</refspec>
         <url>https://github.com/jenkinsci/git-client-plugin</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>origin-lfs/tests/largeFileSupport</name>
+        <name>origin/tests/largeFileSupport</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
