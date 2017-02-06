@@ -70,16 +70,6 @@
       <hudson.plugins.git.extensions.impl.LocalBranch>
         <localBranch>**</localBranch>
       </hudson.plugins.git.extensions.impl.LocalBranch>
-      <hudson.plugins.git.extensions.impl.SparseCheckoutPaths>
-        <sparseCheckoutPaths>
-          <hudson.plugins.git.extensions.impl.SparseCheckoutPath>
-            <path>sample_maven/*</path>
-          </hudson.plugins.git.extensions.impl.SparseCheckoutPath>
-          <hudson.plugins.git.extensions.impl.SparseCheckoutPath>
-            <path>sample_ant/*</path>
-          </hudson.plugins.git.extensions.impl.SparseCheckoutPath>
-        </sparseCheckoutPaths>
-      </hudson.plugins.git.extensions.impl.SparseCheckoutPaths>
     </extensions>
   </scm>
   <quietPeriod>0</quietPeriod>
