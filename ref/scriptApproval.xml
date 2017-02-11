@@ -20,6 +20,9 @@
   </approvedScriptHashes>
   <approvedSignatures>
     <string>method groovy.lang.MetaObjectProtocol getMethods</string>
+    <string>method hudson.model.Cause getShortDescription</string>
+    <string>method hudson.model.Run getCause java.lang.Class</string>
+    <string>method hudson.model.Run getCauses</string>
     <string>method hudson.model.Run getLog int</string>
     <string>method hudson.model.Run getLogFile</string>
     <string>method java.lang.Class getName</string>
@@ -28,9 +31,11 @@
     <string>method org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder$BadgeManager getBuild</string>
     <string>method org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildSummaryAction appendText java.lang.String boolean boolean boolean java.lang.String</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getMetaClass java.lang.Object</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getProperties java.lang.Object</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.net.URL java.util.Map</string>
     <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods sort java.util.Collection</string>
     <string>staticMethod org.codehaus.groovy.runtime.ScriptBytecodeAdapter bitwiseNegate java.lang.Object</string>
+    <string>staticMethod org.codehaus.groovy.runtime.ScriptBytecodeAdapter createRange java.lang.Object java.lang.Object boolean</string>
   </approvedSignatures>
   <aclApprovedSignatures/>
   <approvedClasspathEntries/>
