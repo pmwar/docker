@@ -2,8 +2,9 @@
 
 The Jenkins Continuous Integration and Delivery server.
 
-This is a fully functional Jenkins server, based on the Long Term Support release.
-[http://jenkins.io/](http://jenkins.io/).
+This is a fully functional Jenkins server, based on the Long Term
+Support release and includes jobs which perform various bug checks and
+sanity tests.  [http://jenkins.io/](http://jenkins.io/).
 
 For weekly releases check out [`jenkinsci/jenkins`](https://hub.docker.com/r/jenkinsci/jenkins/)
 
@@ -14,8 +15,8 @@ For weekly releases check out [`jenkinsci/jenkins`](https://hub.docker.com/r/jen
 # Usage
 
 ```
-docker build -t markewaite/master-with-plugins:latest .
-docker run -i --rm -p 8080:8080 -p 50000:50000 -v ~/.m2/:/var/jenkins_home/.m2/ -v ~/public_html/:/var/jenkins_home/userContent/ -t markewaite/master-with-plugins:latest
+docker build -t markewaite/lts-with-plugins:latest .
+docker run -i --rm -p 8080:8080 -p 50000:50000 -v ~/.m2/:/var/jenkins_home/.m2/ -v ~/public_html/:/var/jenkins_home/userContent/ -t markewaite/lts-with-plugins:latest
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
